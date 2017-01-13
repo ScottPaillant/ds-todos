@@ -64,7 +64,11 @@
                             <tr>
                                 <!-- todo Name -->
                                 <td class="table-text">
-                                    <div>{{ $todo->name }}</div>
+                                    <form action="{{ url('todo/'.$todo->id) }}" method="GET">
+                                        <button type="submit" class="btn btn-default">
+                                            <i class="fa fa-trash"></i> {{$todo->name}}
+                                        </button>
+                                    </form>
                                 </td>
 
                                 <td>

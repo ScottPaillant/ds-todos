@@ -58,6 +58,14 @@ class TodoController extends Controller
     public function show($id)
     {
         // Write the code for your assignment here.
+
+        //Get todo using id given
+        $todo = Todo::find($id);
+
+        //return singular view of this todo
+        return view('todo', [
+            'todo' => $todo
+        ]);
     }
 
     /**
